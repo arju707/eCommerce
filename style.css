@@ -1,6 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Lato',sans-serif;
     padding: 0;
+    /* display: flex; */
     margin: 0;
 }
 
@@ -50,13 +55,17 @@ nav{
 
 .slider{
     background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 84%); */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    overflow: hidden;
+    /* display: flex; */
+
 }
 
 .sliderWrapper{
      
     display: flex;
     width: 500vw;
+    transition: all 1.5s ease-in-out;
 }
 
 .sliderItem{
@@ -75,6 +84,9 @@ nav{
     position: absolute;
     border-radius: 50%;
 
+}
+.sliderImg{
+    z-index: 1;
 }
 .sliderTitle{
     position: absolute;
@@ -96,12 +108,11 @@ nav{
     text-align: center;
     color: white;
     border:1px solid gray;
-
-
-}
-.sliderImg{
     z-index: 1;
+
+
 }
+
 
 .buyButton{
     position: absolute;
@@ -156,3 +167,112 @@ nav{
 .sliderItem:nth-child(5) .sliderPrice{
     color: rgb(124,115,80)
 }
+
+
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding: 50px;
+
+
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+ }
+
+ .featureImg{
+    width: 50px;
+    height: 50px;
+ }
+
+ .featureTitle{
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 600;
+
+ }
+ .featureDecs{
+    color: gray;
+    width: 50%;
+    height: 100px;
+ }
+
+
+
+
+
+
+
+ .product{
+    height: 100vh;
+    position: relative;
+    background-color: whitesmoke;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
+ }
+
+ .productImg{
+    margin-top: 80px;
+    width:50%;
+ }
+ .productDetails{
+    position: absolute;
+    top: 10%;
+    width: 40%;
+    right: 0;
+    padding: 50px;
+ }
+
+ .productTitle{
+    font-size: 75px;
+    font-weight: 900;
+
+ }
+
+.productDisc{
+    font-style: 24px;
+    color: gray;
+
+ }
+ .colours,.sizes{
+    display: flex;
+    /* justify-content: space-evenly; */
+ }
+ .colour{
+    width:32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right:10px ;
+    cursor: pointer;
+    margin-bottom: 20px;
+ }
+ .colour:nth-child(2){
+    background-color: navy;
+ }
+
+ .size{
+    padding: 5px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+ }
+ .productButton{
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+ }
+
+ .productButton:hover{
+    background-color: white;
+    color: black;
+ }
