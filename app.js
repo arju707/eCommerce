@@ -3,6 +3,8 @@ const wrapper=document.querySelector(".sliderWrapper")
 const menuItems=document.querySelectorAll(".menuItem")
 
 const sliderPric=document.querySelectorAll(".sliderPrice");
+console.log(sliderPric)
+
 const products = [
     {
       id: 1,
@@ -92,7 +94,11 @@ const products = [
 
   const currentProductImg=document.querySelector(".productImg");
   const currentProductTitle=document.querySelector(".productTitle");
+
+
   const currentProductPrice=document.querySelector(".productPrice");
+
+
   const currentProductDisc=document.querySelector(".productDisc")
   const currentProductColors=document.querySelectorAll(".colour");
   const currentProductSizes=document.querySelectorAll(".size");
@@ -109,7 +115,9 @@ menuItems.forEach((item,index)=>{
         //change text of current product
 
         currentProductTitle.textContent=choosenProduct.title ;
+
         currentProductPrice.textContent=choosenProduct.price;
+        
         currentProductDisc.textContent=choosenProduct.discription;
         currentProductImg.src=choosenProduct.colors[0].img
 

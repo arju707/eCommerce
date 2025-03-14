@@ -322,6 +322,7 @@ label {
   cursor: pointer;
   margin-bottom: 20px;
 }
+
 .colour:nth-child(2) {
   background-color: navy;
 }
