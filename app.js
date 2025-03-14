@@ -2,8 +2,10 @@ const wrapper=document.querySelector(".sliderWrapper")
 
 const menuItems=document.querySelectorAll(".menuItem")
 
-const sliderPric=document.querySelectorAll(".sliderPrice");
-console.log(sliderPric)
+
+
+// const sliderPric=document.querySelectorAll(".sliderPrice");
+// console.log(sliderPric)
 
 const products = [
     {
@@ -88,9 +90,13 @@ const products = [
     },
   ];
 
+ 
+
 
   let choosenProduct=products[0]
+  
 
+  
 
   const currentProductImg=document.querySelector(".productImg");
   const currentProductTitle=document.querySelector(".productTitle");
@@ -102,26 +108,39 @@ const products = [
   const currentProductDisc=document.querySelector(".productDisc")
   const currentProductColors=document.querySelectorAll(".colour");
   const currentProductSizes=document.querySelectorAll(".size");
+  const crntprice=document.querySelectorAll(".sliderPrice")
+
+  
 menuItems.forEach((item,index)=>{
     item.addEventListener("click",()=>{
-
+      
         //change the current slide
         wrapper.style.transform=`translateX(${-100 * index}vw)`;
         // sliderPric.textContent=choosenProduct.price;
 
             //change the choosen product
         choosenProduct=products[index]
+
         
         //change text of current product
-
+        
         currentProductTitle.textContent=choosenProduct.title ;
-
+        
         currentProductPrice.textContent=choosenProduct.price;
+        
         
         currentProductDisc.textContent=choosenProduct.discription;
         currentProductImg.src=choosenProduct.colors[0].img
+        crntprice[index].textContent=choosenProduct.price;
 
+        console.log(crntprice)
+        // sliderPric.textContent=choosenProduct.price
         //giving colours
+
+
+        
+       
+
 
         currentProductColors.forEach((color,index)=>{
           color.style.backgroundColor=choosenProduct.colors[index].code;
@@ -135,6 +154,7 @@ menuItems.forEach((item,index)=>{
 currentProductColors.forEach((color,index)=>{
   color.addEventListener("click",()=>{
     currentProductImg.src=choosenProduct.colors[index].img
+
   })
 })
 
